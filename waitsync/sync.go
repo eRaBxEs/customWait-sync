@@ -23,3 +23,8 @@ func (wg *WaitGroup) Add(delta int) {
 	wg.counter += delta
 	wg.mutex.Unlock()
 }
+
+// Done decrements the WaitGroup counter by 1
+func (wg *WaitGroup) Done() {
+	wg.Add(-1)
+}
