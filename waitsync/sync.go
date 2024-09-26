@@ -4,8 +4,8 @@ import (
 	"sync"
 )
 
-// waitGroup is a custom implementation of a synchronisation primitive
-type waitGroup struct {
+// WaitGroup is a custom implementation of a synchronisation primitive
+type WaitGroup struct {
 	counter int
 	mutex   sync.Mutex
 }
