@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"custom-wait/waitsync"
 )
 
 func main() {
-	fmt.Println("Hello Custom Wait Sync!")
+	var wg = waitsync.NewWaitGroup() // create an instance of the customised WaitGroup
 }
