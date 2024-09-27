@@ -37,7 +37,7 @@ func (wg *WaitGroup) Wait() {
 
 	for wg.counter > 0 { // this happens for each goroutine
 		wg.mutex.Unlock()
-		time.Sleep(10 * time.Second) // Busy wait with sleep
+		time.Sleep(10 * time.Millisecond) // Busy wait with sleep
 		wg.mutex.Lock()
 	}
 }
