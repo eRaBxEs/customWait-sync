@@ -20,6 +20,8 @@ func main() {
 		}(i)
 	}
 
+	wg.Wait() // Add Wait to block till the counter is zero
+
 	fmt.Println("All goroutine successfully finished!")
 
 }
